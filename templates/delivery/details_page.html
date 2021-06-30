@@ -1,0 +1,324 @@
+{% extends 'delivery/base.html' %}
+{% load static %}
+{% block content %}
+
+    <style>
+body{
+	font-family: 'Lora', serif;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: #424242;
+
+	margin-bottom: 35px;
+	margin-top: 0;
+}
+section{
+	text-align: center;
+}
+.blockquote p{
+	font-size: 32px;
+	line-height: 45px;
+	padding-left: 30px;
+	border-left: 3px solid #424242;
+	color: #424242;
+}
+
+.title{
+	position: relative;
+	margin-bottom: 100px;
+}
+.title:after{
+	content: '';
+	height: 5px;
+	width: 40px;
+	background-color: #62aa94;
+	position: absolute;
+	top: 81px;
+	left: calc(50% - 20px);
+}
+
+
+
+.navbar-vira{
+	background-image: none;
+	background-color: transparent;
+	margin-bottom: 0;
+	border-radius: 0;
+	border-color: transparent;
+	transition: all 0.3s ease-in-out;
+}
+.section{
+	padding: 100px 0;
+}
+
+.vira-card{
+	text-align: center;
+}
+.vira-card .vira-card-header{
+	margin-bottom: 45px;
+}
+.vira-card .vira-card-header .card-icon{
+	border: 1px solid #51c2b9;
+	border-radius: 100%;
+	display: inline-block;
+	height: 120px;
+	width: 120px;
+	line-height: 120px;
+	position: relative;
+}
+.vira-card .vira-card-header .card-icon .fa{
+	margin-top: 45px;
+	font-size: 30px;
+}
+.vira-card .vira-card-header .card-icon:after{
+	content: '';
+	height: 100px;
+	width: 100px;
+	background-color: #51c2b9;
+	border-radius: 100%;
+	position: absolute;
+	top: 9px;
+	left: 9px;
+}
+.vira-card .vira-card-header .card-icon span{
+	color: #fff;
+	font-size: 45px;
+	position: relative;
+	z-index: 1;
+}
+.vira-card .vira-card-content h3{
+	position: relative;
+	margin-bottom: 60px
+}
+.vira-card .vira-card-content h3:after{
+	content: '';
+	height: 1px;
+	width: 44px;
+	background-color: #62aa94;
+	position: absolute;
+	top: 52px;
+	left: calc(50% - 22px);
+}
+.vira-card .vira-card-content p{
+	font-size: 15px;
+}
+.vira-card .vira-card-content .social-icons{
+	margin-top: 30px;
+}
+
+/*Button*/
+.vira-btn{
+	border-color: #51c2b9;
+	font-style: italic;
+	color: #51c2b9;
+	border-radius: 0;
+	letter-spacing: 3px;
+	padding: 15px 80px;
+	margin-bottom: 30px;
+	background-color: transparent;
+	transition: all 0.3s ease-in-out;
+}
+.vira-btn:hover{
+	background-color: #51c2b9;
+	color: #fff;
+}
+
+.element .title:after{
+	left: 0;
+	top: 60px;
+}
+.headings p{
+	margin-bottom: 80px;
+}
+.menu:after{
+	position: absolute;
+	left: -65px;
+	top: 10px;
+	color: #fff;
+	font-size: 16px;
+}
+.header h1{
+	margin: 0;
+}
+.header h1, .header p{
+	color: #fff;
+	letter-spacing: 2px;
+}
+.expert{
+	background-color: #f8f8f8;
+}
+.expert p{
+	line-height: 200%;
+}
+.expert .bg-img:after{
+	display: none;
+}
+.expert .section{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.subscribe .vira-btn{
+	margin-bottom: 0;
+	color: #424242;
+	font-weight: 700;
+	border-color: #fff;
+	background-color: #fff;
+}
+.subscribe .vira-btn:hover{
+	background-color: transparent;
+	color: #fff;
+}
+.subscribe p{
+	color: #fff;
+	font-size: 32px;
+	margin-bottom: 35px;
+}
+.subscribe .form-control{
+    width: 320px;
+    margin-bottom: 0;
+    border-color: #fff;
+    color: black;
+}
+    </style>
+
+        <section class="purpose section">
+                <div class="container">
+                    <h2 class="title">What we do</h2>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="vira-card">
+                                <div class="vira-card-header">
+                                    <div class="card-icon">
+                                        <span class="fa fa-handshake-o" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="vira-card-content">
+                                    <h3>Digital Design</h3>
+                                    <p>
+                                        Complimenten, bewonderend gefluit en lonkende blikken zijn enkele risico’s die The Garment Club met zichlaim meebrengt. Onze enige missiede
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="vira-card">
+                                <div class="vira-card-header">
+                                    <div class="card-icon">
+                                        <span class="fa fa-cogs" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="vira-card-content">
+                                    <h3>Web Development</h3>
+                                    <p>
+                                        Complimenten, bewonderend gefluit en lonkende blikken zijn enkele risico’s die The Garment Club met zichlaim meebrengt. Onze enige missiede
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="vira-card">
+                                <div class="vira-card-header">
+                                    <div class="card-icon">
+                                        <span class="fa fa-bicycle" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="vira-card-content">
+                                    <h3>Digital Marketing</h3>
+                                    <p>
+                                        Complimenten, bewonderend gefluit en lonkende blikken zijn enkele risico’s die The Garment Club met zichlaim meebrengt. Onze enige missiede
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<section id="expertise" class="expert">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 bg-img">
+                            <div><img src="http://www.centives.net/S/wp-content/uploads/2014/12/120814_1104_HowRestaura1.jpg" alt="" width="500px" height="550px" style="margin-top: 30px;"></div>
+                        </div>
+                        <div class="col-sm-5 section">
+                            <h2 class="title">Responsive design expert</h2>
+                            <div id="expert-slider" class="owl-carousel">
+                                <div class="item">
+                                    <p>
+                                        Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall proposition. Organically grow the holistic world view of disruptiveinnovationvia workplace diversity and empowerment.
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <p>
+                                        Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="team" class="team section">
+                <div class="container">
+                    <h2 class="title">Our team members</h2>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="vira-card">
+                                <div class="vira-card-header">
+                                    <img style="width: 200px; height: 200px" class="img-responsive" src="/media/images/shashlik.jpg">
+                                </div>
+                                <div class="vira-card-content">
+                                    <h3>Pink Floyd</h3>
+                                    <p>
+                                       Complimenten, bewonderend gefluit en lonkende blikken zijn enkele risico’s die The Garment Club
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="vira-card">
+                                <div class="vira-card-header">
+                                    <img style="width: 200px; height: 200px" class="img-responsive" src="/media/images/shashlik.jpg">
+                                </div>
+                                <div class="vira-card-content">
+                                    <h3>Eric Clapton</h3>
+                                    <p>
+                                        Complimenten, bewonderend gefluit en lonkende blikken zijn enkele risico’s die The Garment Club
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="vira-card">
+                                <div class="vira-card-header">
+                                    <img style="width: 200px; height: 200px" class="img-responsive" src="/media/images/shashlik.jpg">
+                                </div>
+                                <div class="vira-card-content">
+                                    <h3>Elton Jhon</h3>
+                                    <p>
+                                        Complimenten, bewonderend gefluit en lonkende blikken zijn enkele risico’s die The Garment Club
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe section bg-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>Subscribe to our newsletter to get update</p>
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="user-email" placeholder="Write your email here....">
+                                </div>
+                                <button type="submit" class="btn vira-btn">Send me</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% endblock %}

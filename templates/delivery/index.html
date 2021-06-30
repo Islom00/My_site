@@ -1,0 +1,56 @@
+{% extends "delivery/base.html" %}
+{% block content %}
+    <div style="background-image: url('https://i1.wallbox.ru/wallpapers/main2/201715/zelen-gamburger-kotleta-syr-hleb-ovosi-maso-sous-bulocka-sendvic-buterbrod1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;">
+
+
+            {% if q %}
+                <h1>These requested items found...</h1>
+                <h1>Click order in more detail and order now...</h1>
+                <div class="container">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ objects.image.url }}" alt="Card image cap" height="200px" width="200px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ objects.name }}</h5>
+                        <p class="card-text">{{ objects.description }}</p>
+                        <p>${{ objects.price }}</p>
+                        <a href="#" class="btn btn-success">Order Now!</a>
+                    </div>
+                </div>
+            {% else %}
+                <h1>Menu of the foods here...</h1>
+                <h1>Let's choose and order now...</h1>
+                <div class="container mt-5">
+                <div class="row">
+                {% for item in objects %}
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap" height="200px"
+                                 width="200px">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ item.name }}</h5>
+                                <p class="card-text">{{ item.description }}</p>
+                                <p>${{ item.price }}</p>
+                                <a href="{% url 'view' item.name %}" class="btn btn-success">Order Now!</a>
+                            </div>
+
+                        </div>
+                        <br>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        </div>
+</div>
+    <style>
+        h1 {
+            color: chocolate;
+            text-align: center;
+            font-family: sans-serif
+        }
+
+    </style>
+{% endblock %}
+</div>

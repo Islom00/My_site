@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  {% with request.resolver_match.url_name as url_name %}
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {% if request.resolver_match.url_name == 'index' %}active{% endif %}">
+        <a id="home" class="nav-link" href="{% url 'index' %}">Home</a>
+      </li>
+      <li class="nav-item {% if request.resolver_match.url_name == 'detail_page' %}active{% endif %}">
+        <a id="about" class="nav-link" href="{% url 'detail_page' %}">About</a>
+      </li>
+      <li class="nav-item {% if request.resolver_match.url_name == 'service' %}active{% endif %}">
+        <a class="nav-link " href="#">Service</a>
+      </li>
+    </ul>
+  {% endwith %}
+    <form method="GET" action="{% url 'index' %}" class="form-inline my-2 my-lg-0">
+      <input name="q" class="form-control mr-sm-2" type="search" placeholder="Name or category" aria-label="Search">
+      <button class="btn btn-success  my-2 my-sm-0 pt-2 pb-2" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
